@@ -132,6 +132,42 @@ button:hover:before, button:focus:before{
     justify-content: center;
     align-items: center;
 }
+
+.section3{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-purple);
+    color: var(--text-white);
+    padding: 1.5rem;
+    border-radius: 15px;
+    margin: 2rem auto;
+    max-width: 550px;  /* smaller than before */
+    gap: 1.5rem;
+}
+
+.section3-image{
+    width: 180px;
+    height: auto;
+}
+
+.section3-right{
+    flex: 1 1 300px;
+    min-width: 250px;
+    max-width: 2px;  /* this limits how long the lines get */
+}
+
+.section3-textbox{
+    font-size: 1.5em;
+    text-align: center;
+    margin: 0;
+    color: white;
+}
+
+.section3-button{
+    text-align: center;
+}
 /* Footer Styling */
 
 footer{
