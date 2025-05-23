@@ -4,12 +4,13 @@
     --secondary-purple: #24172F;
     --blue: #50C5DB;
 
+
 /* Section 3 * Container Styling */ 
 
 }
 .card-container {
     position: relative;
-    width: 400px;
+    width: 500px;
     margin: 40px auto;
   }
   
@@ -37,7 +38,7 @@
 /* Button Styling */
   
 button {
-    font-size: 18px;
+    font-size: 16px;
     letter-spacing: 2px;
     text-transform: uppercase;
     display: inline-block;
@@ -77,6 +78,60 @@ button:hover:before, button:focus:before{
     opacity: 1;
 }
 
+.section1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-purple);
+    color: var(--text-white);
+    padding: 1.5rem;
+    border-radius: 15px;
+    margin: 2rem auto;
+    max-width: 550px;  /* smaller than before */
+    gap: 1.5rem;
+    
+  }
+  
+  .section1-textbox {
+    flex: 1 1 300px;
+    min-width: 250px;
+    max-width: 400px;  /* this limits how long the lines get */
+  }
+  
+  .section1-header p {
+    font-family: 'Caveat', cursive;
+    font-size: 2.5em;
+    margin: 0;
+    color: white;
+  }
+  
+  .section1-secondary p {
+    font-size: 1em;
+    font-weight: bold;
+    margin: 0.5rem 0;
+    color:white;
+  }
+  
+  .section1-text p {
+    line-height: 1.6;
+    margin-top: 0.75rem;
+    word-wrap: break-word;
+    color: white;
+  }
+  
+  .section1-image img {
+    width: 180px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  }
+
+.section4{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
 /* Footer Styling */
 
 footer{
@@ -86,3 +141,27 @@ footer{
     text-align: center;
     font-style: italic;
 }
+
+/* For responsiveness */
+@media screen and (max-width: 600px) {
+    .section1 {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .section1-image img {
+      width: 140px;
+    }
+  
+    .section1-textbox {
+      align-items: center;
+    }
+
+    .section1-image img {
+        width: 360px;
+        height: auto;
+        border-radius: 50%;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      }
+  }
+  
