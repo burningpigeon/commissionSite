@@ -133,6 +133,7 @@ button {
     text-decoration: none;
     transition: 0.3s ease all;
     z-index: 1;
+    padding: 15px !important;
 }
 
 button:before {
@@ -293,15 +294,15 @@ button:hover:before, button:focus:before{
   
 /* Footer Styling */
 
-footer{
-    margin: 25px;
-    padding: 25px;
-    background-color: #2e2038;
-    padding: 1px;    
-    color:azure;
-    text-align: center;
-    font-style: italic;
+footer {
+  padding: 15px !important;
+  background-color: #2e2038;
+  color: azure;
+  text-align: center;
+  font-style: italic;
 }
+
+
 
 /* For responsiveness */
 @media screen and (max-width: 600px) {
