@@ -66,6 +66,7 @@ nav li:first-child{
 
 .menu-button{
   display: none;
+  color:white;
 }
 
 @media(max-width: 800px){
@@ -305,7 +306,7 @@ footer {
 
 
 /* For responsiveness */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 200px) {
     .section1 {
       flex-direction: column;
       text-align: center;
