@@ -3,7 +3,7 @@
   --primary-purple: #34263F;
   --secondary-purple: #24172F;
   --blue: #50C5DB;
-
+}
 * {
 margin: 0;
 padding: 0;
@@ -16,40 +16,37 @@ body{
 
 /* Nav Bar */
 nav{
-background-color: var(--secondary-purple);
-box-shadow: 3px 3px 5px rgb(0, 0, 0, 0.1);
+  background-color: var(--secondary-purple);
+  box-shadow: 3px 3px 5px rgb(0, 0, 0, 0.1);
 }
 
 nav ul{
-width: 100%;
-list-style: none;
-display: flex;
-justify-content: flex-end;
-align-items: center;
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 nav li{
-height: 50px;
+  height: 50px;
 }
 
 nav a{
-height: 100%;
-padding: 0 30px;
-text-decoration: none;
-display: flex;
-align-items: center;
-color: white;
+  height: 100%;
+  padding: 0 30px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: white;
 }
 
 nav a:hover{
-color: var(--blue);
+  color: var(--blue);
 }
 
 nav li:first-child{
   margin-right: auto;
-}
-
-.icon{
   color:white;
   padding: 0 30px;
   height: 100%;
@@ -57,24 +54,35 @@ nav li:first-child{
   font-family: 'Caveat', cursive;
 }
 
-.sidebar{
-position: fixed;
-top: 0;
-right: 0;
-height: 100vh;
-width: 250px;
-z-index: 999;
-background-color: var(--secondary-purple);
-box-shadow: -10px 0 10px rgb(0, 0, 0, 0.1);
-display: none;
-flex-direction: column;
-align-items: flex-start;
-justify-content: flex-start;
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 999;
+  background-color: var(--secondary-purple);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start; /* align to TOP of sidebar */
+  padding-top: 60px; /* optional: adds space below top edge */
 }
 
+nav ul:not(.sidebar) {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+
 .menu-button{
-display: none;
-color:white;
+  display: none;
+  color:white;
 }
 
 @media(max-width: 800px){
@@ -88,18 +96,18 @@ color:white;
 }
 
 .sidebar li{
-width: 100%;
+  width: 100%;
 }
 
 .sidebar a{
-width: 100%;
+  width: 100%;
 }
-/* Section 3 * Container Styling */ 
+/* Section 2 * Container Styling */ 
 
-}
 .card-container {
   position: relative;
-  width: 500px;
+  width: 90%;                  /* Makes it responsive */
+  max-width: 500px;            /* Keeps it from getting too wide */
   margin: 40px auto;
 }
 
@@ -107,14 +115,15 @@ width: 100%;
   position: absolute;
   top: -12px;
   left: 20px;
-  background-color: #2e2038; 
+  background-color: #2e2038;
   color: white;
   padding: 8px 16px;
   border-radius: 8px;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: bold;
   text-transform: uppercase;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  white-space: nowrap;
 }
 
 .card-content {
@@ -122,6 +131,7 @@ width: 100%;
   border-radius: 12px;
   padding: 40px 20px 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-size: 1rem;
 }
 
 /* Button Styling */
@@ -241,7 +251,7 @@ button:hover:before, button:focus:before{
 .section3-right{
   flex: 1 1 300px;
   min-width: 250px;
-  max-width: 2px;  /* this limits how long the lines get */
+  max-width: 400px;
 }
 
 .section3-textbox{
@@ -314,26 +324,76 @@ font-style: italic;
 
 
 /* For responsiveness */
-@media screen and (max-width: 200px) {
+@media screen and (max-width: 400px) {
   .section1 {
     flex-direction: column;
     text-align: center;
+    max-width: 90%;
+    margin: 1rem auto;
+    padding: 1rem;
   }
 
   .section1-image img {
-    width: 140px;
+    width: 4000px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   }
 
   .section1-textbox {
     align-items: center;
+    max-width: 100%;
+    text-align: center;
   }
 
-  .section1-image img {
-      width: 360px;
-      height: auto;
-      border-radius: 50%;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-    }
+  .section3,
+  .section4-content,
+  .card-container {
+    max-width: 90%;
+    margin: 1rem auto;
+    padding: 1rem;
+  }
+
+  .section3-right {
+    max-width: 100%; /* fix previously broken layout */
+  }
+
+  .section4-header {
+    width: 100%;
+    max-width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .card-label {
+    font-size: 0.7rem;
+    left: 12px;
+    padding: 6px 12px;
+  }
+
+  .card-content {
+    padding: 30px 16px 16px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 1rem;
+  }
+
+  nav li:first-child {
+    font-size: 20px;
+  }
+
+  .menu-button {
+    padding-right: 15px;
+  }
 }
+
 
   
