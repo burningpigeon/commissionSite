@@ -314,26 +314,74 @@ font-style: italic;
 
 
 /* For responsiveness */
-@media screen and (max-width: 200px) {
+@media screen and (max-width: 450px) {
   .section1 {
     flex-direction: column;
     text-align: center;
+    max-width: 90%;
+    margin: 1rem auto;
+    padding: 1rem;
   }
 
   .section1-image img {
-    width: 140px;
+    width: 300px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   }
 
   .section1-textbox {
     align-items: center;
+    max-width: 100%;
+    text-align: center;
   }
 
-  .section1-image img {
-      width: 360px;
-      height: auto;
-      border-radius: 50%;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-    }
-}
+  .section3,
+  .section4-content,
+  .card-container {
+    max-width: 90%;
+    margin: 1rem auto;
+    padding: 1rem;
+  }
 
+  .section3-right {
+    max-width: 100%; /* fix previously broken layout */
+  }
+
+  .section4-header {
+    width: 100%;
+    max-width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .card-label {
+    font-size: 0.7rem;
+    left: 12px;
+    padding: 6px 12px;
+  }
+
+  .card-content {
+    padding: 30px 16px 16px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 1rem;
+  }
+
+  nav li:first-child {
+    font-size: 20px;
+  }
+
+  .menu-button {
+    padding-right: 15px;
+  }
+}
   
