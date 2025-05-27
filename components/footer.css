@@ -1,0 +1,8 @@
+
+footer {
+    padding: 15px !important;
+    background-color: var(--secondary-purple);
+    color: azure;
+    text-align: center;
+    font-style: italic;
+}
