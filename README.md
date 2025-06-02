@@ -8,9 +8,11 @@ commissionSite/
 ├── components/
  |   ├── footer.css
  |   ├── navbar.css
+ |   ├── script.js
 ├── main/
  |   ├── index.html
  |   ├── styles.css
+ |   ├── buttonFunctions.js
 ├── prices/
  |   ├── prices.html
  |   ├── pricesStyles.css

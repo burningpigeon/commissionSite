@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
-  <script src="script.js"></script> 
+  <script src="buttonFunctions.js"></script>
 </head>
 <body>
   <nav>
@@ -71,9 +71,9 @@
             <p>IMPORTANT LINKS</p>
           </div>
           <div class="section4-button-container">
-            <button type="button">PRICES</button>
-            <button type="button">TERMS OF SERVICE</button>
-            <button type="button">MY PROCESS</button>
+            <button type="button" onclick="goToPrices()">PRICES</button>
+            <button type="button" onclick="goToTOS()">TERMS OF SERVICE</button>
+            <button type="button" onclick="goToProcess()">MY PROCESS</button>
             <button type="button">GALLERY</button>
             <button type="button">QUEUE</button>
           </div>
@@ -93,23 +93,7 @@
             </div>
         </div>
     </div>
-
-      
-    
   </main>
-
-  <script>
-    function showSidebar(){
-      const sidebar = document.querySelector('.sidebar')
-      sidebar.style.display = 'flex';
-    }
-
-    function hideSidebar(){
-      const sidebar = document.querySelector('.sidebar')
-      sidebar.style.display = 'none';
-    }
-  </script>
-
 </body>
 <footer>
   <p> &copy; 2025 Pidgepurr - Last updated 5/19/2025</p>
