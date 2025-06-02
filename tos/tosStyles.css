@@ -2,6 +2,7 @@
     --primary-purple: #34263F;
     --secondary-purple: #24172F;
     --blue: #50C5DB;
+    --grey: #82888E;
 }
 
 * {
@@ -12,6 +13,14 @@
 body{
     background: linear-gradient(-45deg, #50C5DB, #EC87C0);
     min-height: 100vh;
+    font-family: 'Lato', sans-serif;
+    color: var(--grey);
+}
+
+.points{
+  margin: 5px; /* Adds space around the list */
+  line-height: 25px;
+  padding: 20px; /* Adds space inside the list container */
 }
 
 .card-container {
@@ -28,7 +37,7 @@ body{
     color: white;
     padding: 8px 16px;
     border-radius: 8px;
-    font-size: 12px;
+    font-size: 16px;
     font-weight: bold;
     text-transform: uppercase;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);

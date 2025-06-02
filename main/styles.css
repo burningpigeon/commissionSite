@@ -3,6 +3,7 @@
   --primary-purple: #34263F;
   --secondary-purple: #24172F;
   --blue: #50C5DB;
+  --grey: #82888E;
 
 * {
 margin: 0;
@@ -12,6 +13,7 @@ padding: 0;
 body{
   background: linear-gradient(-45deg, #50C5DB, #EC87C0);
   min-height: 100vh;
+  font-family: 'Lato', sans-serif;
 }
 
 /* Nav Bar */
@@ -278,6 +280,9 @@ button:hover:before, button:focus:before{
 }
 
 .section4-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: var(--primary-purple);
   padding: 0.75rem 2rem;
   border-radius: 15px;
