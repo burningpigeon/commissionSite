@@ -23,6 +23,10 @@ body{
   padding: 20px; /* Adds space inside the list container */
 }
 
+.points-inner{
+  padding: 5px; /* Adds space inside the list container */
+}
+
 .card-container {
     position: relative;
     width: 500px;
